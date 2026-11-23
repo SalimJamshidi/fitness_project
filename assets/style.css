@@ -41,8 +41,7 @@ a {
   justify-items: center;
   gap: 18px;
   padding: 16px 24px 24px;
-  background: var(--page);
-  border-bottom: 1px solid rgb(245 245 237 / 8%);
+  background: var(--panel);
 }
 
 /* Navigation link layout and interaction states. */
