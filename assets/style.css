@@ -131,9 +131,9 @@ a {
 .intro:not(.gallery-intro) {
   background-image:
     linear-gradient(rgb(11 18 14 / 62%), rgb(11 18 14 / 62%)),
-    url("images/ar.jpeg");
+    url("images/sal.jpeg");
   background-position: center 10%;
-  background-size: contain;
+  background-size: cover;
 }
 
 /* Shared small labels, section headings, and page notes. */
@@ -248,7 +248,7 @@ a {
 .men-card {
   background-image:
     linear-gradient(rgb(11 18 14 / 48%), rgb(11 18 14 / 48%)),
-    url("images/arr.jpeg");
+    url("images/stat.jpeg");
   background-position: center 10%;
   background-size: contain;
 }
@@ -256,8 +256,8 @@ a {
 .women-card {
   background-image:
     linear-gradient(rgb(11 18 14 / 48%), rgb(11 18 14 / 48%)),
-    url("images/Designer%20(5).png");
-  background-position: center top;
+    url("images/wo.jpeg");
+  background-position: center 28%;
   background-size: cover;
 }
 
