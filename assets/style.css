@@ -6,11 +6,12 @@
 /* Shared colors for the dark fitness theme. */
 :root {
   color-scheme: dark;
-  --page: #101711;
-  --panel: #1a241c;
-  --text: #f4f3ec;
-  --muted: #a7b0a4;
-  --accent: #c2f36b;
+  --page: #1D3525;
+  --base: #0B120E;
+  --panel: #14251A;
+  --text: #F5F5ED;
+  --muted: #A6B2A5;
+  --accent: #B9F36B;
 }
 
 /* Base page background, typography, and text color. */
@@ -19,7 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 50% 0, rgb(91 127 66 / 16%), transparent 42rem),
+    radial-gradient(ellipse at 50% 0, rgb(29 53 37 / 16%), transparent 42rem),
     var(--page);
   color: var(--text);
   font-family: Inter, "Helvetica Neue", Arial, sans-serif;
@@ -41,7 +42,7 @@ a {
   gap: 18px;
   padding: 16px 24px 24px;
   background: var(--page);
-  border-bottom: 1px solid rgb(255 255 255 / 8%);
+  border-bottom: 1px solid rgb(245 245 237 / 8%);
 }
 
 /* Navigation link layout and interaction states. */
@@ -65,7 +66,7 @@ a {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  background-color: rgb(255 255 255 / 5%);
+  background-color: rgb(245 245 237 / 5%);
   color: var(--accent);
 }
 
@@ -75,7 +76,7 @@ a {
 }
 
 .site-nav a[aria-current="page"] {
-  background-color: rgb(194 243 107 / 10%);
+  background-color: rgb(185 243 107 / 10%);
   color: var(--accent);
 }
 
@@ -121,6 +122,7 @@ a {
   margin: 0 auto;
 }
 
+/* Center the page introduction and leave room for its heading and supporting text. */
 .intro {
   padding: 88px 0 54px;
   text-align: center;
@@ -128,13 +130,14 @@ a {
 
 .intro:not(.gallery-intro) {
   background-image:
-    linear-gradient(rgb(10 15 11 / 62%), rgb(10 15 11 / 62%)),
+    linear-gradient(rgb(11 18 14 / 62%), rgb(11 18 14 / 62%)),
     url("images/ar.jpeg");
   background-position: center 10%;
   background-size: contain;
 }
 
 /* Shared small labels, section headings, and page notes. */
+/* Use one small-label style to keep section context consistent across pages. */
 .eyebrow,
 .card-kicker,
 .card-number,
@@ -149,6 +152,7 @@ a {
   font-size: 11px;
 }
 
+/* Give page titles and their highlighted words a clear visual hierarchy. */
 .intro h1 {
   margin: 0;
   font-size: clamp(42px, 7vw, 72px);
@@ -161,6 +165,7 @@ a {
   color: var(--accent);
 }
 
+/* Keep introductory copy readable and centered beneath each page title. */
 .intro-copy {
   max-width: 470px;
   margin: 20px auto 0;
@@ -169,6 +174,7 @@ a {
   line-height: 1.7;
 }
 
+/* Make the gallery and about links easy to find and visibly interactive. */
 .gallery-showcase-link {
   display: inline-flex;
   align-items: center;
@@ -176,7 +182,7 @@ a {
   margin-top: 22px;
   padding: 10px 18px;
   border: 1px solid var(--accent);
-  background: rgb(16 23 17 / 92%);
+  background: rgb(11 18 14 / 92%);
   color: var(--accent);
   font-size: 13px;
   font-weight: 700;
@@ -207,10 +213,10 @@ a {
   background: linear-gradient(
     90deg,
     transparent,
-    rgb(194 243 107 / 32%),
+    rgb(185 243 107 / 32%),
     transparent
   );
-  box-shadow: 0 0 12px rgb(194 243 107 / 15%);
+  box-shadow: 0 0 12px rgb(185 243 107 / 15%);
   content: "";
   opacity: 0;
   pointer-events: none;
@@ -232,16 +238,16 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding: 25px 28px;
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 0;
-  background: linear-gradient(145deg, #243128, #18211a 72%);
-  box-shadow: 0 16px 40px rgb(0 0 0 / 16%);
+  background: var(--panel);
+  box-shadow: 0 16px 40px rgb(11 18 14 / 16%);
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
 .men-card {
   background-image:
-    linear-gradient(rgb(10 15 11 / 48%), rgb(10 15 11 / 48%)),
+    linear-gradient(rgb(11 18 14 / 48%), rgb(11 18 14 / 48%)),
     url("images/arr.jpeg");
   background-position: center 10%;
   background-size: contain;
@@ -249,7 +255,7 @@ a {
 
 .women-card {
   background-image:
-    linear-gradient(rgb(10 15 11 / 48%), rgb(10 15 11 / 48%)),
+    linear-gradient(rgb(11 18 14 / 48%), rgb(11 18 14 / 48%)),
     url("images/Designer%20(5).png");
   background-position: center top;
   background-size: cover;
@@ -261,7 +267,7 @@ a {
   right: -65px;
   width: 240px;
   height: 240px;
-  border: 1px solid rgb(194 243 107 / 15%);
+  border: 1px solid rgb(185 243 107 / 15%);
   border-radius: 50%;
   content: "";
 }
@@ -272,15 +278,15 @@ a {
   right: -28px;
   width: 165px;
   height: 165px;
-  border: 1px solid rgb(194 243 107 / 11%);
+  border: 1px solid rgb(185 243 107 / 11%);
   border-radius: 50%;
   content: "";
 }
 
 .plan-card:hover {
   transform: translateY(-6px);
-  border-color: rgb(194 243 107 / 55%);
-  box-shadow: 0 22px 50px rgb(0 0 0 / 27%);
+  border-color: rgb(185 243 107 / 55%);
+  box-shadow: 0 22px 50px rgb(11 18 14 / 27%);
 }
 
 /* Workout card labels, headings, and decorative number. */
@@ -288,7 +294,7 @@ a {
   position: relative;
   top: -6px;
   z-index: 1;
-  color: #c0c9bc;
+  color: var(--muted);
   font-size: 10px;
 }
 
@@ -322,7 +328,7 @@ a {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 23px;
-  color: #e2e8de;
+  color: var(--text);
   font-size: 13px;
   font-weight: 600;
 }
@@ -348,7 +354,7 @@ a {
   padding: 0 13px;
   border: 1px solid var(--accent);
   border-radius: 5px;
-  background: rgb(16 23 17 / 92%);
+  background: rgb(11 18 14 / 92%);
   color: var(--accent);
   font-size: 12px;
   font-weight: 700;
@@ -358,7 +364,7 @@ a {
   position: absolute;
   right: 24px;
   bottom: -37px;
-  color: rgb(255 255 255 / 3%);
+  color: rgb(245 245 237 / 3%);
   font-size: 180px;
   font-weight: 800;
   letter-spacing: -0.1em;
@@ -368,7 +374,7 @@ a {
 
 .page-note {
   margin: 35px 0 45px;
-  color: #839080;
+  color: var(--muted);
   font-size: 9px;
   text-align: center;
 }
@@ -382,15 +388,15 @@ a {
   max-width: 760px;
   margin: 0 auto;
   padding: clamp(28px, 6vw, 54px);
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 18px;
-  background: linear-gradient(145deg, #243128, #18211a 72%);
-  box-shadow: 0 16px 40px rgb(0 0 0 / 16%);
+  background: var(--panel);
+  box-shadow: 0 16px 40px rgb(11 18 14 / 16%);
 }
 
 .about-panel p {
   margin: 0;
-  color: #dce3d8;
+  color: var(--text);
   font-size: clamp(16px, 2.2vw, 19px);
   line-height: 1.85;
 }
@@ -404,10 +410,10 @@ a {
   max-width: 700px;
   margin: clamp(48px, 10vh, 100px) auto;
   padding: clamp(28px, 6vw, 56px);
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 18px;
-  background: linear-gradient(145deg, #243128, #18211a 72%);
-  box-shadow: 0 16px 40px rgb(0 0 0 / 16%);
+  background: var(--panel);
+  box-shadow: 0 16px 40px rgb(11 18 14 / 16%);
   text-align: center;
 }
 
@@ -426,7 +432,7 @@ a {
 .access-panel > p:not(.eyebrow) {
   max-width: 510px;
   margin: 0 auto;
-  color: #dce3d8;
+  color: var(--text);
   font-size: 15px;
   line-height: 1.7;
 }
@@ -456,7 +462,7 @@ a {
 .access-button:hover,
 .access-button:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgb(194 243 107 / 20%);
+  box-shadow: 0 8px 22px rgb(185 243 107 / 20%);
 }
 
 .access-button:focus-visible {
@@ -475,10 +481,10 @@ a {
   position: relative;
   min-height: 360px;
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 16px;
   background: var(--panel);
-  box-shadow: 0 16px 40px rgb(0 0 0 / 16%);
+  box-shadow: 0 16px 40px rgb(11 18 14 / 16%);
 }
 
 .gallery-item img {
@@ -500,7 +506,7 @@ a {
   bottom: 0;
   left: 0;
   padding: 45px 18px 18px;
-  background: linear-gradient(transparent, rgb(10 15 11 / 88%));
+  background: linear-gradient(transparent, rgb(11 18 14 / 88%));
   color: var(--text);
   font-size: 13px;
   font-weight: 600;
@@ -508,8 +514,8 @@ a {
 
 /* Fitness news cards on the portfolio page. */
 .news-section {
-  --news-accent: #78baff;
-  --news-muted: #aab8ca;
+  --news-accent: var(--accent);
+  --news-muted: var(--muted);
 
   position: relative;
   z-index: 1;
@@ -542,17 +548,17 @@ a {
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 14px;
   background: var(--panel);
-  box-shadow: 0 16px 38px rgb(0 0 0 / 20%);
+  box-shadow: 0 16px 38px rgb(11 18 14 / 20%);
   transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
 
 .news-card:hover {
   transform: translateY(-5px);
-  border-color: rgb(120 186 255 / 48%);
-  box-shadow: 0 22px 44px rgb(0 0 0 / 30%), 0 0 22px rgb(80 155 235 / 10%);
+  border-color: rgb(185 243 107 / 48%);
+  box-shadow: 0 22px 44px rgb(11 18 14 / 30%), 0 0 22px rgb(185 243 107 / 10%);
 }
 
 .news-card h4 {
@@ -587,7 +593,7 @@ a {
 .news-link:hover,
 .news-link:focus-visible {
   gap: 11px;
-  color: #b6d9ff;
+  color: var(--accent);
 }
 
 .news-link:focus-visible {
@@ -600,9 +606,9 @@ a {
   grid-column: 1 / -1;
   margin: 0;
   padding: 22px 24px;
-  border: 1px solid rgb(120 186 255 / 14%);
+  border: 1px solid rgb(185 243 107 / 14%);
   border-radius: 12px;
-  background: linear-gradient(145deg, #1d2b3c, #141e2b 75%);
+  background: var(--panel);
   color: var(--news-muted);
   line-height: 1.6;
 }
@@ -622,23 +628,23 @@ a {
   width: 100%;
   margin: 0 auto 42px !important;
   padding: 12px;
-  border: 1px solid rgb(255 255 255 / 8%);
+  border: 1px solid rgb(245 245 237 / 8%);
   border-radius: 14px;
-  background: linear-gradient(145deg, rgb(36 49 40 / 72%), rgb(24 33 26 / 72%));
-  box-shadow: 0 18px 42px rgb(0 0 0 / 18%);
+  background: var(--panel);
+  box-shadow: 0 18px 42px rgb(11 18 14 / 18%);
 }
 
 .women-plan-page .input-group {
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 10%);
+  border: 1px solid rgb(245 245 237 / 10%);
   border-radius: 8px;
-  background: rgb(16 23 17 / 82%);
+  background: rgb(11 18 14 / 82%);
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .women-plan-page .input-group:focus-within {
-  border-color: rgb(194 243 107 / 55%);
-  box-shadow: 0 0 0 3px rgb(194 243 107 / 9%);
+  border-color: rgb(185 243 107 / 55%);
+  box-shadow: 0 0 0 3px rgb(185 243 107 / 9%);
 }
 
 .women-plan-page .form-control {
@@ -657,16 +663,16 @@ a {
 }
 
 .women-plan-page .form-control:focus {
-  background: rgb(255 255 255 / 3%);
+  background: rgb(245 245 237 / 3%);
   color: var(--text);
-  box-shadow: inset 0 0 0 1px rgb(194 243 107 / 45%);
+  box-shadow: inset 0 0 0 1px rgb(185 243 107 / 45%);
 }
 
 .women-plan-page .btn-primary {
   min-height: 48px;
   padding: 0 20px;
   border: 1px solid var(--accent);
-  background: #18211a;
+  background: var(--base);
   color: var(--accent);
   font: inherit;
   font-size: 13px;
@@ -679,7 +685,7 @@ a {
   border-color: var(--accent);
   background: var(--accent);
   color: var(--page);
-  box-shadow: 0 0 18px rgb(194 243 107 / 16%);
+  box-shadow: 0 0 18px rgb(185 243 107 / 16%);
 }
 
 .women-plan-page .btn-primary:focus-visible {
@@ -692,7 +698,7 @@ a {
   width: 100%;
   max-width: none;
   padding: 30px 0 0 !important;
-  border-top: 1px solid rgb(255 255 255 / 8%);
+  border-top: 1px solid rgb(245 245 237 / 8%);
 }
 
 .women-plan-page .container.py-5::before {
@@ -724,7 +730,7 @@ a {
   height: 2px;
   border-radius: 2px;
   background: var(--accent);
-  box-shadow: 0 0 14px rgb(194 243 107 / 28%);
+  box-shadow: 0 0 14px rgb(185 243 107 / 28%);
   content: "";
 }
 
@@ -738,7 +744,7 @@ a {
 
 .women-plan-page #female-exercises > p {
   padding: 24px;
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 12px;
   background: var(--panel);
   color: var(--muted);
@@ -747,13 +753,13 @@ a {
 .women-plan-page #female-exercises .card {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 15px;
   background:
-    radial-gradient(ellipse at 100% 0, rgb(194 243 107 / 5%), transparent 58%),
-    linear-gradient(145deg, #243128, #18211a 72%);
+    radial-gradient(ellipse at 100% 0, rgb(185 243 107 / 5%), transparent 58%),
+    var(--panel);
   color: var(--text);
-  box-shadow: 0 16px 40px rgb(0 0 0 / 16%) !important;
+  box-shadow: 0 16px 40px rgb(11 18 14 / 16%) !important;
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
@@ -764,7 +770,7 @@ a {
   right: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgb(194 243 107 / 54%), transparent);
+  background: linear-gradient(90deg, transparent, rgb(185 243 107 / 54%), transparent);
   content: "";
   opacity: 0.55;
   pointer-events: none;
@@ -773,8 +779,8 @@ a {
 
 .women-plan-page #female-exercises .card:hover {
   transform: translateY(-5px);
-  border-color: rgb(194 243 107 / 48%);
-  box-shadow: 0 24px 48px rgb(0 0 0 / 28%), 0 0 22px rgb(194 243 107 / 7%) !important;
+  border-color: rgb(185 243 107 / 48%);
+  box-shadow: 0 24px 48px rgb(11 18 14 / 28%), 0 0 22px rgb(185 243 107 / 7%) !important;
 }
 
 .women-plan-page #female-exercises .card:hover::before {
@@ -784,7 +790,7 @@ a {
 .women-plan-page #female-exercises .card-img-top {
   display: block;
   width: 100%;
-  border-bottom: 1px solid rgb(255 255 255 / 9%);
+  border-bottom: 1px solid rgb(245 245 237 / 9%);
   background: var(--page);
 }
 
@@ -940,16 +946,16 @@ html:has(#home-content) {
 }
 
 #home-content {
-  --home-accent: #c2f36b;
-  --home-muted: #a7b0a4;
+  --home-accent: var(--accent);
+  --home-muted: var(--muted);
   padding: 46px 0 72px;
 }
 
-#home-content .home-hero,
 #home-content > section {
   scroll-margin-top: 24px;
 }
 
+/* Hide reveal targets only when motion is enabled, then show them on entry. */
 #home-content.home-motion-ready .home-reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -966,19 +972,20 @@ html:has(#home-content) {
   position: relative;
   overflow: hidden;
   padding: clamp(36px, 7vw, 78px);
-  border: 1px solid rgb(255 255 255 / 10%);
+  border: 1px solid rgb(245 245 237 / 10%);
   background:
-    radial-gradient(ellipse at 92% 8%, rgb(194 243 107 / 14%), transparent 34%),
-    linear-gradient(135deg, #1a241c, #121a14 74%);
-  box-shadow: 0 18px 48px rgb(0 0 0 / 14%);
+    radial-gradient(ellipse at 92% 8%, rgb(185 243 107 / 14%), transparent 34%),
+    var(--panel);
+  box-shadow: 0 18px 48px rgb(11 18 14 / 14%);
   transition: border-color 220ms ease, box-shadow 220ms ease;
 }
 
 #home-content .home-hero:hover {
-  border-color: rgb(194 243 107 / 24%);
-  box-shadow: 0 22px 54px rgb(0 0 0 / 22%);
+  border-color: rgb(185 243 107 / 24%);
+  box-shadow: 0 22px 54px rgb(11 18 14 / 22%);
 }
 
+/* Match homepage headings and supporting text to the shared site palette. */
 #home-content .eyebrow {
   margin: 0 0 18px;
   color: var(--home-accent);
@@ -990,7 +997,7 @@ html:has(#home-content) {
 #home-content h1 {
   max-width: 760px;
   margin: 0;
-  color: #f4f3ec;
+  color: var(--text);
   font-size: clamp(40px, 7vw, 74px);
   font-weight: 750;
   letter-spacing: -0.065em;
@@ -1003,7 +1010,7 @@ html:has(#home-content) {
 
 #home-content .home-roles {
   margin: 22px 0 0;
-  color: #f4f3ec;
+  color: var(--text);
   font-size: clamp(15px, 2vw, 19px);
   font-weight: 600;
   line-height: 1.8;
@@ -1024,7 +1031,7 @@ html:has(#home-content) {
 
 #home-content .section-heading {
   margin: 0;
-  color: #f4f3ec;
+  color: var(--text);
   font-size: clamp(25px, 4vw, 34px);
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -1037,14 +1044,15 @@ html:has(#home-content) {
 }
 
 /* Skill and project cards use the shared dark panels and hover lift. */
+/* Give skill and project cards a shared surface and hover treatment. */
 #home-content .skill-card,
 #home-content .project-card {
   height: 100%;
-  border: 1px solid rgb(255 255 255 / 9%);
+  border: 1px solid rgb(245 245 237 / 9%);
   border-radius: 0;
-  background: linear-gradient(145deg, #1c271f, #151d17);
-  color: #f4f3ec;
-  box-shadow: 0 10px 24px rgb(0 0 0 / 10%);
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: 0 10px 24px rgb(11 18 14 / 10%);
   transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
 
@@ -1053,11 +1061,12 @@ html:has(#home-content) {
 }
 
 #home-content .skill-card:hover {
-  border-color: rgb(194 243 107 / 42%);
-  box-shadow: 0 16px 30px rgb(0 0 0 / 22%);
+  border-color: rgb(185 243 107 / 42%);
+  box-shadow: 0 16px 30px rgb(11 18 14 / 22%);
   transform: translateY(-4px);
 }
 
+/* Highlight card labels and keep card descriptions readable. */
 #home-content .skill-number,
 #home-content .project-kicker {
   color: var(--home-accent);
@@ -1068,7 +1077,7 @@ html:has(#home-content) {
 
 #home-content .skill-card h3 {
   margin: 17px 0 7px;
-  color: #f4f3ec;
+  color: var(--text);
   font-size: 18px;
   font-weight: 700;
 }
@@ -1093,7 +1102,7 @@ html:has(#home-content) {
 #home-content .project-card:hover,
 #home-content .project-card:focus-visible {
   border-color: var(--home-accent);
-  box-shadow: 0 18px 34px rgb(0 0 0 / 24%);
+  box-shadow: 0 18px 34px rgb(11 18 14 / 24%);
   transform: translateY(-5px);
 }
 
@@ -1104,7 +1113,7 @@ html:has(#home-content) {
 
 #home-content .project-card h3 {
   margin: 13px 0 9px;
-  color: #f4f3ec;
+  color: var(--text);
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.035em;
@@ -1119,8 +1128,8 @@ html:has(#home-content) {
 
 #home-content .contact-panel {
   padding: clamp(26px, 5vw, 42px);
-  border: 1px solid rgb(194 243 107 / 28%);
-  background: linear-gradient(120deg, rgb(194 243 107 / 8%), rgb(26 36 28 / 72%));
+  border: 1px solid rgb(185 243 107 / 28%);
+  background: linear-gradient(120deg, rgb(185 243 107 / 8%), rgb(20 37 26 / 88%));
 }
 
 #home-content .contact-panel p {

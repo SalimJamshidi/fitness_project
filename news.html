@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Document metadata and shared site stylesheet. -->
+    <!-- Set the page metadata and load the styles shared across the site. -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101711">
+    <meta name="theme-color" content="#1D3525">
     <title>News | Salim Jamshidi</title>
     <link rel="stylesheet" href="assets/style.css">
     <style>
+      /* Keep the news content above decorative layers and size it to the viewport. */
       .portfolio-content {
         position: relative;
         z-index: 1;
@@ -17,7 +18,7 @@
     </style>
   </head>
   <body>
-    <!-- Shared brand and navigation links. -->
+    <!-- Keep the site brand and page navigation consistent across pages. -->
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Salim Jamshidi home">
         <span class="brand-mark" aria-hidden="true">SJ</span>
@@ -30,21 +31,14 @@
       </nav>
     </header>
 
-    <!-- Portfolio page content. -->
+    <!-- Provide the container where the script loads and displays news cards. -->
     <main class="page-content portfolio-content">
-
-      <!-- ===== PORTFOLIO SECTION ===== -->
-<!-- ===== FITNESS NEWS SECTION ===== -->
-<section class="news-section">
-  <h2> Latest News</h2>
-  <div id="news-container">Loading latest news...</div>
-</section>
-
-
-
-
+      <section class="news-section">
+        <h2> Latest News</h2>
+        <div id="news-container">Loading latest news...</div>
+      </section>
     </main>
-    <!-- Load jQuery before the shared page interactions. -->
+    <!-- Load jQuery before the shared script that uses it. -->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="js/script.js"></script>
   </body>

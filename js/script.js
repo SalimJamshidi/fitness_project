@@ -72,7 +72,7 @@ $(function () {
       .text(`
         .plan-card.js-plan-hover {
           transform: translateY(-6px) scale(1.015);
-          box-shadow: 0 22px 50px rgb(0 0 0 / 27%);
+          box-shadow: 0 22px 50px rgb(11 18 14 / 27%);
         }
       `)
       .appendTo("head");
@@ -288,25 +288,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// News loading and rendering functions for the news page.
+// Load news only when its page container exists, then render the returned articles.
 async function loadFitnessNews() {
     // Find the element that will hold the loading message and news cards.
     const Container = document.getElementById("news-container");
     if (!Container) return;
     
-    // Show an initial loading message when the news section exists.
-    if (Container) {
-        Container.innerHTML = '<p class="loading-text">Loading fitness news...</p>';
-    }
+    // Show an initial loading message before requesting the articles.
+    Container.innerHTML = '<p class="loading-text">Loading fitness news...</p>';
 
     try {
         // Request up to five English-language health and sports news articles.
         const response = await fetch("https://api.apilayer.net/mediastack/v1/news?access_key=360df136a6f5c875c015f5387d162507&categories=health,sports&limit=5&languages=en");
         // Convert the server response to a JavaScript object.
         const data = await response.json();
-        // Log the returned news data for debugging.
-        console.log(data);
-
         // Continue only when the response contains at least one news article.
         if (data.data && data.data.length > 0) {
             // Keep only the title, description, and article URL needed by the page.
@@ -364,22 +359,18 @@ $("#news-container").on("click", ".news-card", function (event) {
 // Start loading news when this script runs.
 loadFitnessNews();
 
-
-
-
-
-
-
+// Fetch and render the men's plan exercises when their container is present.
 async function loadExercises() {
     const exerciseContainer = document.getElementById("exercise-container");
     
-    // ✅ Safety check — only run if element exists on page
+    // Skip the request on pages that do not contain the men's plan section.
     if (!exerciseContainer) return;
     
-    // Show loading message
+    // Give visitors feedback while the exercise request is in progress.
     exerciseContainer.innerHTML = '<p class="loading-text">Loading exercises...</p>';
 
     try {
+        // Request biceps exercises from the API.
         const response = await fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps", {
             method: "GET",
             headers: {
@@ -387,15 +378,15 @@ async function loadExercises() {
             }
         });
 
-        // Handle HTTP errors
+        // Turn unsuccessful responses into errors handled by the catch block.
         if (!response.ok) {
             throw new Error("HTTP Error: " + response.status);
         }
 
+        // Parse the returned exercise list.
         const data = await response.json();
-        console.log("Exercises data:", data);
 
-        // Display the exercises
+        // Render each result, or show a message when the API returns none.
         if (data && data.length > 0) {
             exerciseContainer.innerHTML = "";
             
@@ -421,7 +412,7 @@ async function loadExercises() {
     }
 }
 
-// Run when page loads
+// Start loading exercises after the page markup is ready.
 document.addEventListener("DOMContentLoaded", loadExercises);
 
 // Reveal the exercise section when the visitor starts checkout and after returning.

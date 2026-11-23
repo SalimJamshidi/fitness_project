@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Page metadata and shared stylesheet. -->
+    <!-- Set the page metadata and load the styles shared across the site. -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101711">
+    <meta name="theme-color" content="#1D3525">
     <meta name="description" content="Find your strength with Faiz Fitness workout plans.">
     <title>Salim Jamshidi | Find Your Strength</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
-    <!-- Brand header and site navigation. -->
+    <!-- Keep the site brand and page navigation consistent across pages. -->
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Salim Jamshidi home">
         <span class="brand-mark" aria-hidden="true">SJ</span>
@@ -20,21 +20,20 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="news.html">News</a>
-        
         <a href="Fitness.html">Fitness</a>
       </nav>
     </header>
 
     <main class="page-content">
 
-      <!-- Introduction, skill cards, featured projects, and contact details. -->
+      <!-- Group the introduction, skills, projects, and contact details. -->
       <div id="home-content">
         <section class="home-hero" aria-labelledby="home-title">
           <p class="eyebrow">WELCOME — THIS IS MY SPACE ON THE WEB</p>
           <h1 id="home-title">Hi, I'm <span>Salim Jamshidi</span></h1>
           <p class="home-roles">
-            Full Stack Learner <span aria-hidden="true">|</span>
-            Fitness Enthusiast <span aria-hidden="true">|</span>
+            Full Stack  <span aria-hidden="true">|</span>
+            Fitness  <span aria-hidden="true">|</span>
             Problem Solver
           </p>
           <p class="hero-copy">
@@ -50,6 +49,7 @@
             <h2 class="section-heading" id="skills-title">My skills</h2>
             <p class="section-intro">The building blocks I use to turn ideas into useful experiences.</p>
           </div>
+          <!-- Reuse the same card structure for each skill in the responsive grid. -->
           <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-3">
             <div class="col">
               <article class="skill-card">
@@ -130,6 +130,7 @@
             <p class="eyebrow">A FEW THINGS I’M BUILDING</p>
             <h2 class="section-heading" id="projects-title">Featured projects</h2>
           </div>
+          <!-- Link each featured project to its corresponding site page. -->
           <div class="row row-cols-1 row-cols-md-2 g-3">
             <div class="col">
               <a class="project-card" href="news.html" aria-label="View my news">
@@ -164,15 +165,17 @@
           </p>
         </section>
       </div>
-      <!-- Reveal homepage content on scroll when motion is enabled. -->
+      <!-- Reveal homepage sections as they enter view when motion is allowed. -->
       <script>
         (() => {
+          // Find the homepage content and check the visitor's motion preference.
           const homeContent = document.getElementById("home-content");
           const prefersReducedMotion = window.matchMedia(
             "(prefers-reduced-motion: reduce)"
           ).matches;
 
           if (homeContent && !prefersReducedMotion && "IntersectionObserver" in window) {
+            // Observe the hero, sections, and cards that should reveal on scroll.
             const revealItems = homeContent.querySelectorAll(
               ".home-hero, #home-content > section, .skill-card, .project-card"
             );
@@ -180,6 +183,7 @@
               (entries, observer) => {
                 entries.forEach((entry) => {
                   if (entry.isIntersecting) {
+                    // Show each item once, then stop observing it.
                     entry.target.classList.add("is-visible");
                     observer.unobserve(entry.target);
                   }
@@ -190,6 +194,7 @@
 
             homeContent.classList.add("home-motion-ready");
             revealItems.forEach((item) => {
+              // Mark each target for animation and begin watching it.
               item.classList.add("home-reveal");
               revealObserver.observe(item);
             });
@@ -197,7 +202,7 @@
         })();
       </script>
     </main>
-    <!-- Load jQuery before the site's interactive effects. -->
+    <!-- Load jQuery before the shared script that uses it. -->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="js/script.js"></script>
   </body>
