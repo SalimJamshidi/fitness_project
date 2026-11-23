@@ -255,8 +255,8 @@ a {
 .women-card {
   background-image:
     linear-gradient(rgb(11 18 14 / 48%), rgb(11 18 14 / 48%)),
-    url("images/wo.jpeg");
-  background-position: center 28%;
+    url("images/woo.jpeg");
+  background-position: center 45%;
   background-size: cover;
 }
 
